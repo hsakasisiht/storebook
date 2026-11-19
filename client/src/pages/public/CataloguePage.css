@@ -1,0 +1,203 @@
+.catalogue-page {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+}
+
+.catalogue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid rgba(36, 72, 85, 0.15);
+  padding-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: var(--space-1);
+}
+
+.catalogue-title {
+  font-size: 2.25rem;
+  color: var(--color-text-heading);
+  margin-bottom: 4px;
+}
+
+.catalogue-subtitle {
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.catalogue-count-badge {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+.notice-banner {
+  background-color: #FFF3CD;
+  border: 1px solid #FFE69C;
+  color: #856404;
+  padding: 10px 16px;
+  border-radius: var(--radius-small);
+  margin-bottom: var(--space-6);
+  font-size: 0.9rem;
+}
+
+.catalogue-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.catalogue-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Skeleton Loading */
+.catalogue-grid-skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--space-6);
+}
+
+.book-card-skeleton {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.skeleton-media {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background-color: #E6E1D8;
+  border-radius: var(--radius-small);
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-line {
+  height: 14px;
+  background-color: #E6E1D8;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+/* Empty State */
+.catalogue-empty-state {
+  text-align: center;
+  padding: var(--space-12) var(--space-6);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.catalogue-empty-state h3 {
+  font-size: 1.4rem;
+  margin-bottom: var(--space-2);
+}
+
+.catalogue-empty-state p {
+  color: var(--color-muted);
+  max-width: 440px;
+  margin: 0 auto var(--space-6);
+}
+
+/* Pagination */
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-indicator {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .catalogue-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .catalogue-grid,
+  .catalogue-grid-skeleton {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .catalogue-title {
+    font-size: 1.75rem;
+  }
+
+  .catalogue-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 380px) {
+  .catalogue-grid,
+  .catalogue-grid-skeleton {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode Refinements */
+[data-theme="dark"] .catalogue-header {
+  border-bottom-color: rgba(144, 174, 173, 0.18);
+}
+
+[data-theme="dark"] .catalogue-count-badge {
+  background-color: var(--color-surface);
+  color: #FBE9D0;
+  border-color: rgba(144, 174, 173, 0.25);
+}
+
+[data-theme="dark"] .section-eyebrow {
+  color: #FF705C;
+}
+
+[data-theme="dark"] .pagination-wrapper {
+  border-top-color: rgba(144, 174, 173, 0.18);
+}
+
+[data-theme="dark"] .skeleton-media,
+[data-theme="dark"] .skeleton-line {
+  background-color: #17262D;
+}

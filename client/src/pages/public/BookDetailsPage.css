@@ -1,0 +1,284 @@
+.book-details-page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-16);
+}
+
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-6);
+}
+
+.breadcrumbs a {
+  color: var(--color-deep-teal);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-signal-coral);
+}
+
+.breadcrumbs span {
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.book-details-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: var(--space-12);
+  padding: var(--space-8);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-large);
+}
+
+.details-cover-wrapper {
+  position: relative;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(36, 72, 85, 0.15);
+  background-color: #F1ECE1;
+  aspect-ratio: 2 / 3;
+}
+
+.details-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.details-featured-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: var(--color-signal-coral);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.book-details-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-category-pill {
+  align-self: flex-start;
+  background-color: rgba(135, 79, 65, 0.12);
+  color: var(--color-terracotta);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-3);
+}
+
+.details-title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+}
+
+.details-author {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-6);
+}
+
+.details-author strong {
+  color: var(--color-text);
+}
+
+.details-price-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-6);
+}
+
+.details-price {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.details-stock-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.status-in {
+  background-color: rgba(92, 217, 155, 0.15);
+  color: #2F6F4E;
+}
+
+[data-theme="dark"] .status-in {
+  color: #58C992;
+}
+
+.status-out {
+  background-color: rgba(230, 72, 51, 0.12);
+  color: var(--color-signal-coral);
+}
+
+.details-desc-block {
+  margin-bottom: var(--space-8);
+}
+
+.details-desc-block h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.details-desc-block p {
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 1rem;
+  opacity: 0.92;
+}
+
+.details-action-box {
+  background-color: var(--card-subdued-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  border-radius: var(--radius-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 450px;
+}
+
+.quantity-picker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.quantity-picker label {
+  font-weight: 600;
+  color: var(--color-text-heading);
+  font-size: 0.9rem;
+}
+
+.quantity-picker select {
+  width: 90px;
+}
+
+.btn-add-cart-large {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.added-notification {
+  background-color: #D1E7DD;
+  color: #0F5132;
+  padding: 8px 14px;
+  border-radius: var(--radius-small);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.added-notification a {
+  color: #0F5132;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+.details-out-notice {
+  background-color: #F8D7DA;
+  color: #842029;
+  padding: var(--space-4);
+  border-radius: var(--radius-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 450px;
+}
+
+@media (max-width: 900px) {
+  .book-details-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .book-details-cover-col {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-details-layout {
+    padding: var(--space-4);
+    gap: var(--space-4);
+    border-radius: var(--radius-medium);
+  }
+
+  .book-details-cover-col {
+    max-width: 240px;
+  }
+
+  .details-title {
+    font-size: 1.6rem;
+  }
+
+  .details-price-row {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    padding: var(--space-3) 0;
+  }
+
+  .details-price {
+    font-size: 1.5rem;
+  }
+
+  .details-action-box {
+    padding: var(--space-4);
+    max-width: 100%;
+  }
+
+  .btn-add-cart-large {
+    width: 100%;
+  }
+}
+
+/* Dark Mode Refinements */
+[data-theme="dark"] .book-details-layout {
+  background: linear-gradient(180deg, #142127 0%, #101B20 100%);
+  border: 1px solid rgba(144, 174, 173, 0.18);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .details-cover-wrapper {
+  background-color: #0E161A;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .details-action-box {
+  background: linear-gradient(180deg, #111B20 0%, #0D161A 100%);
+  border: 1px solid rgba(144, 174, 173, 0.2);
+}
+
+[data-theme="dark"] .details-category-pill {
+  background-color: rgba(201, 114, 94, 0.2);
+  color: #E28F7D;
+}
+
+[data-theme="dark"] .breadcrumbs a {
+  color: #FBE9D0;
+}
+
+[data-theme="dark"] .breadcrumbs a:hover {
+  color: var(--color-signal-coral);
+}

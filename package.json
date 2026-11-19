@@ -1,0 +1,23 @@
+{
+  "name": "pandora-online-bookstore",
+  "version": "1.0.0",
+  "description": "Pandora Online Book Store - Academic Mini Project",
+  "private": true,
+  "scripts": {
+    "client:dev": "npm run dev --prefix client",
+    "client:build": "npm run build --prefix client",
+    "server:dev": "npm run dev --prefix server",
+    "server:start": "npm run start --prefix server",
+    "seed": "npm run seed --prefix server",
+    "test:acceptance": "node server/src/scripts/runAcceptanceTests.js"
+  },
+  "keywords": [
+    "bookstore",
+    "react",
+    "express",
+    "mongodb",
+    "fullstack"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,112 @@
+.not-found-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
+  padding: var(--space-12) var(--space-4);
+}
+
+.not-found-card {
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  padding: var(--space-12) var(--space-8);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.not-found-ornament {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.not-found-code {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.not-found-title {
+  font-size: 2rem;
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-3);
+}
+
+.not-found-message {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 440px;
+  margin: 0 auto var(--space-8);
+}
+
+.not-found-actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.not-found-btn {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .not-found-card {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .not-found-code {
+    font-size: 3rem;
+  }
+
+  .not-found-title {
+    font-size: 1.5rem;
+  }
+
+  .not-found-message {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-6);
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .not-found-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Dark Mode */
+[data-theme="dark"] .not-found-card {
+  background: linear-gradient(180deg, #152329 0%, #101B20 100%);
+  border: 1px solid rgba(144, 174, 173, 0.2);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .not-found-code {
+  color: #E28F7D;
+  text-shadow: 0 2px 12px rgba(226, 143, 125, 0.2);
+}
+
+[data-theme="dark"] .not-found-title {
+  color: #FBE9D0;
+}
+
+[data-theme="dark"] .not-found-message {
+  color: #A2B5B5;
+}

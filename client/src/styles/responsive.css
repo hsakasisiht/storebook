@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Free Book Store — Comprehensive Responsive Architecture
+   Breakpoints:
+     - Desktop / Wide Screens: > 1024px
+     - Small Laptops / Tablets Landscape: 769px - 1024px
+     - Tablets Portrait / Large Phablets: 541px - 768px
+     - Mobile Phones: 381px - 540px
+     - Compact Phones: <= 380px (e.g. iPhone SE, Galaxy Fold cover)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Fluid Typography & Global Root Variables
+   -------------------------------------------------------------------------- */
+:root {
+  --container-max-width: 1200px;
+}
+
+/* Tablet & Smaller Laptops */
+@media (max-width: 1024px) {
+  :root {
+    --container-max-width: 960px;
+    --space-16: 48px;
+    --space-12: 36px;
+    --space-8: 24px;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.55rem; }
+  h3 { font-size: 1.25rem; }
+}
+
+/* Tablet Portrait & Large Phones */
+@media (max-width: 768px) {
+  :root {
+    --container-max-width: 100%;
+    --space-16: 36px;
+    --space-12: 28px;
+    --space-8: 20px;
+  }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.15rem; }
+
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* Form rows collapse to single column */
+  .form-row,
+  .form-row-three {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-3) !important;
+  }
+
+  /* Prevent mobile Safari / Chrome 16px auto-zoom */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Mobile Phones (Portrait) */
+@media (max-width: 480px) {
+  :root {
+    --space-16: 28px;
+    --space-12: 22px;
+    --space-8: 16px;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+
+  .container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  /* Full-width responsive button utility */
+  .btn-mobile-full {
+    width: 100% !important;
+    justify-content: center;
+  }
+}
+
+/* Ultra-compact phones (<= 360px) */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h1 { font-size: 1.35rem; }
+  h2 { font-size: 1.15rem; }
+}
+
+/* --------------------------------------------------------------------------
+   2. Global Responsive Utilities
+   -------------------------------------------------------------------------- */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-medium);
+}
+
+.table-responsive table {
+  min-width: 600px;
+}
+
+/* Responsive Modal Behavior across phones and tablets */
+@media (max-width: 640px) {
+  .modal-backdrop {
+    padding: var(--space-2);
+  }
+
+  .modal-content {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    padding: var(--space-4) !important;
+    max-height: 92vh !important;
+    border-radius: var(--radius-small) !important;
+  }
+
+  .modal-header {
+    margin-bottom: var(--space-4) !important;
+    padding-bottom: var(--space-2) !important;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+    gap: var(--space-2) !important;
+    margin-top: var(--space-4) !important;
+    padding-top: var(--space-3) !important;
+  }
+
+  .modal-actions .btn {
+    width: 100% !important;
+  }
+}
+
+/* Auth Pages Responsive Padding */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: var(--space-5) var(--space-4) !important;
+  }
+
+  .auth-demo-btns {
+    flex-direction: column !important;
+  }
+}
+
+/* Admin Categories layout responsive split */
+.admin-categories-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-8);
+}
+
+@media (max-width: 900px) {
+  .admin-categories-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
