@@ -1,111 +1,131 @@
 :root {
-  /* Approved Deep Vintage Mood Brand Palette */
-  --color-deep-teal: #244855;
-  --color-signal-coral: #E64833;
-  --color-terracotta: #874F41;
-  --color-muted-sage: #90AEAD;
-  --color-warm-cream: #FBE9D0;
-
-  /* Supporting Neutrals - Light Mode */
-  --color-page: #F7F4EE;
+  /* ==========================================================================
+     LIGHT MODE: The Oxford Library (Warm Vellum & Archival Carbon Ink)
+     ========================================================================== */
+  
+  /* Core Brand Tokens */
+  --color-page: #FBF9F4;
   --color-surface: #FFFFFF;
-  --color-surface-hover: #FAF7F2;
-  --color-text: #20313A;
-  --color-text-heading: #244855;
-  --color-muted: #62747A;
-  --color-border: #E2DED6;
-  --color-border-subtle: #ECE8E1;
+  --color-surface-hover: #F6F2EA;
+  --color-surface-subdued: #F3EFE7;
+  --card-subdued-bg: #F3EFE7;
+
+  --color-text-heading: #1B2228;
+  --color-text: #2D3338;
+  --color-muted: #6B737B;
+
+  --color-primary-accent: #B85D19;
+  --color-primary-hover: #9B4C10;
+  --color-secondary-accent: #3D5A50;
+
+  --color-border: #E3DCD1;
+  --color-border-subtle: #ECE6DC;
+
+  /* Backward Compatibility Aliases */
+  --color-deep-teal: #1B2228;
+  --color-signal-coral: #B85D19;
+  --color-terracotta: #8C4722;
+  --color-muted-sage: #6B737B;
+  --color-warm-cream: #F3EFE7;
 
   /* Semantic Structural Tokens */
-  --header-bg: #244855;
-  --header-text: #FBE9D0;
-  --footer-bg: #244855;
-  --footer-text: #FBE9D0;
-  --sidebar-bg: #244855;
-  --sidebar-text: #FBE9D0;
+  --header-bg: #FBF9F4;
+  --header-text: #1B2228;
+  --footer-bg: #1B2228;
+  --footer-text: #F2EDE4;
+  --sidebar-bg: #1B2228;
+  --sidebar-text: #F2EDE4;
   --input-bg: #FFFFFF;
-  --input-text: #20313A;
-  --input-border: #E2DED6;
-  --card-subdued-bg: #FAF7F2;
-  --table-hover-bg: rgba(36, 72, 85, 0.03);
-  --modal-backdrop-bg: rgba(32, 49, 58, 0.65);
+  --input-text: #1B2228;
+  --input-border: #DCD4C7;
+  --table-hover-bg: rgba(27, 34, 40, 0.03);
+  --modal-backdrop-bg: rgba(18, 21, 24, 0.6);
 
   /* Status Colors */
-  --color-status-pending: #90AEAD;
-  --color-status-confirmed: #244855;
-  --color-status-shipped: #5C7A80;
-  --color-status-delivered: #874F41;
-  --color-status-cancelled: #E64833;
+  --color-status-pending: #6B737B;
+  --color-status-confirmed: #3D5A50;
+  --color-status-shipped: #2B576C;
+  --color-status-delivered: #2E7D32;
+  --color-status-cancelled: #B83B26;
 
   /* Typography */
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-display: 'Georgia', 'Cambria', 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
   /* Spacing Scale */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
+  --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
+  --space-10: 40px;
   --space-12: 48px;
   --space-16: 64px;
 
-  /* Shape and Depth */
-  --radius-small: 6px;
-  --radius-medium: 12px;
-  --radius-large: 18px;
+  /* Shape and Depth (Crisp Micro-Radii, Calm Natural Shadows) */
+  --radius-small: 4px;
+  --radius-medium: 6px;
+  --radius-large: 8px;
   --radius-full: 9999px;
-  --shadow-card: 0 4px 16px rgba(36, 72, 85, 0.08);
-  --shadow-hover: 0 8px 24px rgba(36, 72, 85, 0.14);
+  --shadow-card: 0 1px 3px rgba(27, 34, 40, 0.05), 0 1px 2px rgba(27, 34, 40, 0.03);
+  --shadow-hover: 0 4px 12px rgba(27, 34, 40, 0.08);
 
   /* Layout */
   --container-max-width: 1200px;
 }
 
 /* ==========================================================================
-   Dark Mode Palette - Deep Vintage Nocturne (Curated Luxury Bookstore)
+   DARK MODE: Midnight Reading Room (Matte Slate & Amber Bookmark)
    ========================================================================== */
 [data-theme="dark"] {
-  /* Rich Velvety Midnight Canvas & Elevated Surfaces */
-  --color-page: #0C1317;
-  --color-surface: #142127;
-  --color-surface-hover: #1B2D35;
-  --color-text: #D5DFDF;
-  --color-text-heading: #FBE9D0;
-  --color-muted: #8FA2A2;
-  --color-border: #21353E;
-  --color-border-subtle: #18272F;
+  --color-page: #121518;
+  --color-surface: #1A1F24;
+  --color-surface-hover: #21282F;
+  --color-surface-subdued: #15181C;
+  --card-subdued-bg: #15181C;
 
-  /* Brand Accents preserved with rich depth (NOT washed out) */
-  --color-deep-teal: #1C3642;
-  --color-signal-coral: #E64833;
-  --color-terracotta: #C9725E;
-  --color-muted-sage: #90AEAD;
-  --color-warm-cream: #FBE9D0;
+  --color-text-heading: #F2EDE4;
+  --color-text: #D2D7DD;
+  --color-muted: #88929A;
+
+  --color-primary-accent: #D97736;
+  --color-primary-hover: #E28A4E;
+  --color-secondary-accent: #608679;
+
+  --color-border: #262D35;
+  --color-border-subtle: #1E2329;
+
+  /* Backward Compatibility Aliases in Dark Mode */
+  --color-deep-teal: #1A1F24;
+  --color-signal-coral: #D97736;
+  --color-terracotta: #D97736;
+  --color-muted-sage: #88929A;
+  --color-warm-cream: #F2EDE4;
 
   /* Semantic Structural Tokens */
-  --header-bg: #090E11;
-  --header-text: #FBE9D0;
-  --footer-bg: #090E11;
-  --footer-text: #FBE9D0;
-  --sidebar-bg: #090E11;
-  --sidebar-text: #FBE9D0;
-  --input-bg: #0E171C;
-  --input-text: #FBE9D0;
-  --input-border: #253C47;
-  --card-subdued-bg: #101B20;
-  --table-hover-bg: rgba(251, 233, 208, 0.04);
-  --modal-backdrop-bg: rgba(4, 7, 9, 0.85);
+  --header-bg: #121518;
+  --header-text: #F2EDE4;
+  --footer-bg: #0D0F11;
+  --footer-text: #F2EDE4;
+  --sidebar-bg: #0E1013;
+  --sidebar-text: #F2EDE4;
+  --input-bg: #161A1E;
+  --input-text: #F2EDE4;
+  --input-border: #2B343D;
+  --table-hover-bg: rgba(242, 237, 228, 0.04);
+  --modal-backdrop-bg: rgba(5, 7, 8, 0.8);
 
   /* Status Colors Dark Mode */
-  --color-status-pending: #90AEAD;
-  --color-status-confirmed: #4F8294;
-  --color-status-shipped: #6F949E;
-  --color-status-delivered: #C9725E;
-  --color-status-cancelled: #E64833;
+  --color-status-pending: #88929A;
+  --color-status-confirmed: #608679;
+  --color-status-shipped: #528299;
+  --color-status-delivered: #4CAF50;
+  --color-status-cancelled: #E0533C;
 
-  /* Deep Atmospheric Shadows */
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
-  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.7);
+  /* Atmospheric Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.45);
 }

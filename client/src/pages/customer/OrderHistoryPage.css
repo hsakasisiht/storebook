@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: var(--space-8);
-  border-bottom: 2px solid rgba(36, 72, 85, 0.1);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: var(--space-4);
   gap: var(--space-4);
   flex-wrap: wrap;
@@ -232,18 +232,18 @@
 
 /* Dark Mode Refinements */
 [data-theme="dark"] .order-card {
-  background: linear-gradient(180deg, #142127 0%, #101B20 100%);
-  border: 1px solid rgba(144, 174, 173, 0.18);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
 }
 
 [data-theme="dark"] .order-card-header {
-  background-color: #0E161A;
-  border-bottom-color: rgba(144, 174, 173, 0.18);
+  background-color: var(--color-surface-subdued);
+  border-bottom-color: var(--color-border);
 }
 
 [data-theme="dark"] .orders-header {
-  border-bottom-color: rgba(144, 174, 173, 0.18);
+  border-bottom-color: var(--color-border);
 }
 
 [data-theme="dark"] .orders-user-badge {

@@ -12,13 +12,14 @@
   flex-direction: column;
   padding: var(--space-6) var(--space-4);
   flex-shrink: 0;
-  transition: background-color 0.25s ease;
+  border-right: 1px solid var(--color-border);
+  transition: background-color 0.2s ease;
 }
 
 .admin-brand {
   margin-bottom: var(--space-8);
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid rgba(251, 233, 208, 0.2);
+  border-bottom: 1px solid rgba(242, 237, 228, 0.15);
 }
 
 .admin-brand-link {
@@ -26,19 +27,22 @@
 }
 
 .admin-brand h2 {
-  color: var(--color-warm-cream);
+  color: var(--sidebar-text);
   font-size: 1.5rem;
   letter-spacing: 0.08em;
 }
 
 .admin-badge {
-  font-size: 0.75rem;
-  background-color: var(--color-terracotta);
+  font-size: 0.725rem;
+  background-color: var(--color-primary-accent);
   color: #FFFFFF;
   padding: 2px 8px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-small);
   display: inline-block;
   margin-top: 4px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .admin-nav {
@@ -49,7 +53,7 @@
 }
 
 .admin-nav-item {
-  color: rgba(251, 233, 208, 0.85);
+  color: rgba(242, 237, 228, 0.82);
   padding: 10px 14px;
   border-radius: var(--radius-small);
   font-weight: 500;
@@ -60,18 +64,18 @@
 }
 
 .admin-nav-item:hover {
-  background-color: rgba(251, 233, 208, 0.12);
+  background-color: rgba(242, 237, 228, 0.1);
   color: #FFFFFF;
 }
 
 .admin-nav-item.active {
-  background-color: var(--color-signal-coral);
+  background-color: var(--color-primary-accent);
   color: #FFFFFF;
   font-weight: 600;
 }
 
 .admin-sidebar-footer {
-  border-top: 1px solid rgba(251, 233, 208, 0.2);
+  border-top: 1px solid rgba(242, 237, 228, 0.15);
   padding-top: var(--space-4);
   display: flex;
   flex-direction: column;
@@ -79,18 +83,19 @@
 }
 
 .btn-store-return {
-  color: var(--color-muted-sage);
+  color: var(--color-muted);
   font-size: 0.85rem;
   padding: 6px 0;
 }
 
 .btn-store-return:hover {
-  color: var(--color-warm-cream);
+  color: var(--sidebar-text);
 }
 
 .btn-admin-logout {
-  background-color: rgba(230, 72, 51, 0.2);
-  color: var(--color-warm-cream);
+  background-color: transparent;
+  border: 1px solid rgba(242, 237, 228, 0.2);
+  color: var(--sidebar-text);
   padding: 8px;
   border-radius: var(--radius-small);
   font-size: 0.85rem;
@@ -98,7 +103,9 @@
 }
 
 .btn-admin-logout:hover {
-  background-color: var(--color-signal-coral);
+  background-color: var(--color-primary-accent);
+  border-color: var(--color-primary-accent);
+  color: #FFFFFF;
 }
 
 .admin-main {
@@ -114,7 +121,7 @@
   padding: 12px 16px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid rgba(251, 233, 208, 0.15);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -125,7 +132,7 @@
   font-size: 1.35rem;
   letter-spacing: 0.1em;
   font-weight: 700;
-  color: var(--color-warm-cream);
+  color: var(--sidebar-text);
   margin-right: 8px;
 }
 
@@ -136,8 +143,8 @@
 }
 
 .admin-menu-toggle {
-  background: rgba(251, 233, 208, 0.12);
-  color: var(--color-warm-cream);
+  background: rgba(242, 237, 228, 0.12);
+  color: var(--sidebar-text);
   font-size: 1.25rem;
   padding: 6px 12px;
   border-radius: var(--radius-small);
@@ -189,7 +196,7 @@
     display: none;
     width: 100%;
     padding: var(--space-4);
-    border-bottom: 2px solid rgba(251, 233, 208, 0.15);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .admin-sidebar.admin-sidebar-open {
@@ -230,11 +237,11 @@
 
 /* Dark Mode Refinements */
 [data-theme="dark"] .admin-sidebar {
-  background-color: #090E11;
-  border-right: 1px solid rgba(144, 174, 173, 0.14);
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--color-border);
 }
 
 [data-theme="dark"] .admin-topbar {
-  background-color: #0E161B;
-  border-bottom: 1px solid rgba(144, 174, 173, 0.14);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }

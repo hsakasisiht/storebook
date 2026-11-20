@@ -5,7 +5,7 @@
 
 .cart-header {
   margin-bottom: var(--space-8);
-  border-bottom: 2px solid rgba(36, 72, 85, 0.1);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: var(--space-4);
 }
 
@@ -320,16 +320,16 @@
 /* Dark Mode Refinements */
 [data-theme="dark"] .cart-summary-card,
 [data-theme="dark"] .cart-items-card {
-  background: linear-gradient(180deg, #142127 0%, #101B20 100%);
-  border: 1px solid rgba(144, 174, 173, 0.18);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
 }
 
 [data-theme="dark"] .qty-control-box {
-  background-color: #0E161A;
-  border-color: rgba(144, 174, 173, 0.25);
+  background-color: var(--color-surface-subdued);
+  border-color: var(--color-border);
 }
 
 [data-theme="dark"] .cart-header {
-  border-bottom-color: rgba(144, 174, 173, 0.18);
+  border-bottom-color: var(--color-border);
 }

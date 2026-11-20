@@ -49,10 +49,16 @@ export const HomePage = () => {
           </div>
           <div className="hero-card-accent">
             <div className="hero-accent-inner">
-              <span className="accent-tag">Editor's Pick</span>
+              <span className="accent-tag">Curated Archive</span>
               <h3 className="accent-title">Stories That Stay With You</h3>
-              <p className="accent-desc">Handpicked favorites loved by readers all over the world.</p>
-              <div className="accent-decor-shelf">📚 📖 ☕</div>
+              <p className="accent-desc">Handpicked classics and contemporary editions loved by readers worldwide.</p>
+              <div className="accent-feature-list">
+                <span className="accent-feature-item">Verified Editions</span>
+                <span className="accent-feature-divider">·</span>
+                <span className="accent-feature-item">Careful Packaging</span>
+                <span className="accent-feature-divider">·</span>
+                <span className="accent-feature-item">Direct Dispatch</span>
+              </div>
             </div>
           </div>
         </div>
@@ -103,17 +109,17 @@ export const HomePage = () => {
       {/* Value Pillars */}
       <section className="pillars-section container">
         <div className="pillar-item">
-          <span className="pillar-icon">🌿</span>
+          <span className="pillar-index">01</span>
           <h4>Thoughtfully Picked</h4>
           <p>From timeless masterpieces to contemporary page-turners, find books you'll genuinely enjoy.</p>
         </div>
         <div className="pillar-item">
-          <span className="pillar-icon">📦</span>
+          <span className="pillar-index">02</span>
           <h4>Fast &amp; Easy Ordering</h4>
           <p>Simple ordering with instant confirmation and reliable doorstep delivery.</p>
         </div>
         <div className="pillar-item">
-          <span className="pillar-icon">☕</span>
+          <span className="pillar-index">03</span>
           <h4>Made for Book Lovers</h4>
           <p>Built with care by readers, for readers. No clutter, no hassle, just good books.</p>
         </div>

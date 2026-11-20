@@ -1,5 +1,8 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
 import { errorHandler } from './middleware/errorHandler.js';
 import categoryRoutes from './routes/category.routes.js';
 import bookRoutes from './routes/book.routes.js';
@@ -62,7 +65,23 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/admin', adminRoutes);
 
-// 404 Handler for undefined routes
+// Static frontend serving if client/dist exists
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const clientDistPath = path.resolve(__dirname, '../../client/dist');
+
+if (fs.existsSync(clientDistPath)) {
+  app.use(express.static(clientDistPath));
+
+  app.get('*', (req, res, next) => {
+    if (req.originalUrl.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(clientDistPath, 'index.html'));
+  });
+}
+
+// 404 Handler for undefined API routes
 app.use((req, res, next) => {
   res.status(404).json({
     success: false,

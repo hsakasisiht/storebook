@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 2px solid rgba(36, 72, 85, 0.15);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: var(--space-6);
   margin-bottom: var(--space-8);
   gap: var(--space-4);
@@ -18,9 +18,9 @@
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-terracotta);
+  color: var(--color-primary-accent);
   margin-bottom: var(--space-1);
 }
 
@@ -39,16 +39,16 @@
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   padding: 6px 14px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-small);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-text-heading);
 }
 
 .notice-banner {
-  background-color: #FFF3CD;
-  border: 1px solid #FFE69C;
-  color: #856404;
+  background-color: var(--color-surface-subdued);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
   padding: 10px 16px;
   border-radius: var(--radius-small);
   margin-bottom: var(--space-6);
@@ -90,14 +90,14 @@
 .skeleton-media {
   width: 100%;
   aspect-ratio: 2 / 3;
-  background-color: #E6E1D8;
+  background-color: var(--color-surface-hover);
   border-radius: var(--radius-small);
   animation: pulse 1.5s infinite;
 }
 
 .skeleton-line {
   height: 14px;
-  background-color: #E6E1D8;
+  background-color: var(--color-surface-hover);
   border-radius: 4px;
   animation: pulse 1.5s infinite;
 }
@@ -180,24 +180,24 @@
 
 /* Dark Mode Refinements */
 [data-theme="dark"] .catalogue-header {
-  border-bottom-color: rgba(144, 174, 173, 0.18);
+  border-bottom-color: var(--color-border);
 }
 
 [data-theme="dark"] .catalogue-count-badge {
   background-color: var(--color-surface);
-  color: #FBE9D0;
-  border-color: rgba(144, 174, 173, 0.25);
+  color: var(--color-text-heading);
+  border-color: var(--color-border);
 }
 
 [data-theme="dark"] .section-eyebrow {
-  color: #FF705C;
+  color: var(--color-primary-accent);
 }
 
 [data-theme="dark"] .pagination-wrapper {
-  border-top-color: rgba(144, 174, 173, 0.18);
+  border-top-color: var(--color-border);
 }
 
 [data-theme="dark"] .skeleton-media,
 [data-theme="dark"] .skeleton-line {
-  background-color: #17262D;
+  background-color: var(--color-surface-subdued);
 }
