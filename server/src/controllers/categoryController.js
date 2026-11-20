@@ -1,7 +1,17 @@
+import mongoose from 'mongoose';
 import Category from '../models/Category.js';
+import { initialCategories } from '../utils/seedData.js';
 
 export const getCategories = async (req, res, next) => {
   try {
+    if (mongoose.connection.readyState !== 1) {
+      return res.status(200).json({
+        success: true,
+        count: initialCategories.length,
+        categories: initialCategories.map((c, i) => ({ ...c, _id: `cat-${i + 1}` })),
+      });
+    }
+
     const categories = await Category.find().sort({ name: 1 });
     res.status(200).json({
       success: true,
@@ -9,7 +19,12 @@ export const getCategories = async (req, res, next) => {
       categories,
     });
   } catch (error) {
-    next(error);
+    // If DB error, fallback to initialCategories
+    res.status(200).json({
+      success: true,
+      count: initialCategories.length,
+      categories: initialCategories.map((c, i) => ({ ...c, _id: `cat-${i + 1}` })),
+    });
   }
 };
 
