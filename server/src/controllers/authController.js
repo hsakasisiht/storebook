@@ -1,8 +1,16 @@
+import mongoose from 'mongoose';
 import User from '../models/User.js';
 import { generateToken } from '../utils/generateToken.js';
 
 export const register = async (req, res, next) => {
   try {
+    if (mongoose.connection.readyState !== 1) {
+      return res.status(503).json({
+        success: false,
+        message: 'Database is currently offline. Please whitelist IP 0.0.0.0/0 in your MongoDB Atlas Network Access.',
+      });
+    }
+
     const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
@@ -56,6 +64,13 @@ export const register = async (req, res, next) => {
 
 export const login = async (req, res, next) => {
   try {
+    if (mongoose.connection.readyState !== 1) {
+      return res.status(503).json({
+        success: false,
+        message: 'Database is currently offline. Please whitelist IP 0.0.0.0/0 in your MongoDB Atlas Network Access.',
+      });
+    }
+
     const { email, password } = req.body;
 
     if (!email || !password) {
