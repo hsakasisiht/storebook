@@ -156,6 +156,10 @@ export const BooksPage = () => {
                       src={b.coverImage || 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80'}
                       alt=""
                       className="table-thumb"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80';
+                      }}
                     />
                   </td>
                   <td>

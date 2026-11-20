@@ -25,6 +25,7 @@ export const BookCard = ({ book }) => {
           className="book-card-cover"
           loading="lazy"
           onError={(e) => {
+            e.currentTarget.onerror = null;
             e.currentTarget.src = defaultCover;
           }}
         />

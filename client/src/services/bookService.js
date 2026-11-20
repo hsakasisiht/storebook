@@ -86,7 +86,7 @@ export const FALLBACK_BOOKS = [
     price: 549,
     stock: 12,
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1532012164546-f432f2e3edd9?auto=format&fit=crop&w=600&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
   },
   {
     _id: 'book-8',

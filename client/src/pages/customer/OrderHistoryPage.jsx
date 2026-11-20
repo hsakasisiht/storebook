@@ -120,6 +120,10 @@ export const OrderHistoryPage = () => {
                           src={item.coverImage || 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80'}
                           alt=""
                           className="snapshot-thumb"
+                          onError={(e) => {
+                            e.currentTarget.onerror = null;
+                            e.currentTarget.src = 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80';
+                          }}
                         />
                         <div className="snapshot-details">
                           <strong className="snapshot-title">{item.titleSnapshot}</strong>
