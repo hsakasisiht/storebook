@@ -4,6 +4,8 @@
   "description": "Pandora Online Book Store - Academic Mini Project",
   "private": true,
   "scripts": {
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "start": "node server/src/server.js",
     "client:dev": "npm run dev --prefix client",
     "client:build": "npm run build --prefix client",
     "server:dev": "npm run dev --prefix server",
